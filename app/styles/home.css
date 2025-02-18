@@ -1,0 +1,56 @@
+.demo-list {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.demo-nav {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.demo-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.demo-item {
+  margin-bottom: 1rem;
+}
+
+.demo-item:last-child {
+  margin-bottom: 0;
+}
+
+.demo-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #2563eb;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.demo-link:hover {
+  background-color: #2563eb;
+  color: white;
+  transform: translateX(5px);
+}

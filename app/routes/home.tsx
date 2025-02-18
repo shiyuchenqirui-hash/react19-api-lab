@@ -1,13 +1,39 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Link } from "react-router-dom";
+import "../styles/home.css";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "React 19 Demo" },
+    { name: "description", content: "React 19 Features Demo" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div className="demo-list">
+      <div className="container">
+        <h1 className="title">React 19 Features Demo</h1>
+        <nav className="demo-nav">
+          <ul className="demo-menu">
+            <li className="demo-item">
+              <Link to="/UseTransitionDemo" className="demo-link">
+                UseTransitionDemo
+              </Link>
+            </li>
+            <li className="demo-item">
+              <Link to="/UseOptimisticDemo" className="demo-link">
+                UseOptimisticDemo
+              </Link>
+            </li>
+            <li className="demo-item">
+              <Link to="/demo3" className="demo-link">
+                Demo 3 - Asset Loading
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  );
 }
