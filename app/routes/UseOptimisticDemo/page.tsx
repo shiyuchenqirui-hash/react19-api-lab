@@ -83,14 +83,20 @@ export default function UseOptimisticDemo() {
           </div>
         ))}
       </div>
-      <form action={handleSendMessage} ref={formRef} className="chat-form">
+      <form
+        id="chat-form"
+        action={handleSendMessage}
+        ref={formRef}
+        className="chat-form"
+      >
         <input
+          id="chat-input"
           type="text"
           name="message"
           placeholder="输入消息..."
           className="chat-input"
         />
-        <button type="submit" className="send-button">
+        <button id="send-button" type="submit" className="send-button">
           发送
         </button>
       </form>
