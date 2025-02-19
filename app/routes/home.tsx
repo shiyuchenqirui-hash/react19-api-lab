@@ -17,23 +17,23 @@ export default function Home() {
         <nav className="demo-nav">
           <ul className="demo-menu">
             <li className="demo-item">
-              <Link to="/UseTransitionDemo" className="demo-link">
-                UseTransitionDemo
+              <Link to="/UseTransition" className="demo-link">
+                UseTransition
               </Link>
             </li>
             <li className="demo-item">
-              <Link to="/UseOptimisticDemo" className="demo-link">
-                UseOptimisticDemo
+              <Link to="/UseOptimistic" className="demo-link">
+                UseOptimistic
               </Link>
             </li>
             <li className="demo-item">
-              <Link to="/UseDeferredValueDemo" className="demo-link">
-                UseDeferredValueDemo
+              <Link to="/UseDeferredValue" className="demo-link">
+                UseDeferredValue
               </Link>
             </li>
             <li className="demo-item">
-              <Link to="/RefCleanDemo" className="demo-link">
-                RefCleanDemo
+              <Link to="/RefClean" className="demo-link">
+                RefClean
               </Link>
             </li>
           </ul>
