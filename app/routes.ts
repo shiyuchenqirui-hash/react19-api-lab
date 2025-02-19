@@ -6,4 +6,5 @@ export default [
   route("UseOptimistic", "routes/UseOptimistic/page.tsx"),
   route("RefClean", "routes/RefClean/page.tsx"),
   route("UseDeferredValue", "routes/UseDeferredValue/page.tsx"),
+  route("UseActionState", "routes/UseActionState/page.tsx"),
 ] satisfies RouteConfig;
