@@ -4,5 +4,6 @@ export default [
   index("routes/home.tsx"),
   route("UseTransitionDemo", "routes/UseTransitionDemo/page.tsx"),
   route("UseOptimisticDemo", "routes/UseOptimisticDemo/page.tsx"),
-  route("demo3", "routes/demo3/page.tsx"),
+  route("RefCleanDemo", "routes/RefCleanDemo/page.tsx"),
+  route("UseDeferredValueDemo", "routes/UseDeferredValueDemo/page.tsx"),
 ] satisfies RouteConfig;

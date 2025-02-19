@@ -75,6 +75,21 @@
   transform: translateY(1px);
 }
 
+.back-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+}
+
 @keyframes slideIn {
   from {
     opacity: 0;

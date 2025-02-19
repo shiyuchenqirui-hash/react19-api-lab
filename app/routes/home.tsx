@@ -27,8 +27,13 @@ export default function Home() {
               </Link>
             </li>
             <li className="demo-item">
-              <Link to="/demo3" className="demo-link">
-                Demo 3 - Asset Loading
+              <Link to="/RefCleanDemo" className="demo-link">
+                RefCleanDemo
+              </Link>
+            </li>
+            <li className="demo-item">
+              <Link to="/UseDeferredValueDemo" className="demo-link">
+                UseDeferredValueDemo
               </Link>
             </li>
           </ul>

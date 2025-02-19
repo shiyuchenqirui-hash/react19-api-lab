@@ -1,4 +1,5 @@
 import { useOptimistic, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 // 模拟异步消息发送函数
@@ -57,15 +58,18 @@ export default function UseOptimisticDemo() {
       ]);
     } catch (error) {
       console.error("消息发送失败:", error);
-      // 如果发送失败，可以选择删除乐观更新的消息
-      setMessages((prevMessages) =>
-        prevMessages.filter((msg) => msg.sending !== true)
-      );
     }
+
+    // ! 实测: addOptimisticMessage 加入的数据在Action结束才被移除
+    console.log("Action: ", new Date().toLocaleString());
+    await new Promise((resolve) => setTimeout(resolve, 3000));
   }
 
   return (
     <div className="chat-container">
+      <Link to="/" className="back-button">
+        返回首页
+      </Link>
       <div className="messages-container">
         {optimisticMessages.map((message, index) => (
           <div

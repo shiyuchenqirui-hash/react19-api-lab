@@ -1,7 +1,6 @@
 import React, { useState, useTransition } from "react";
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
-
-interface ActionsDemoProps {}
 
 export default function UseTransitionDemo() {
   const [inputValue, setInputValue] = useState<string>("");
@@ -24,6 +23,7 @@ export default function UseTransitionDemo() {
 
   return (
     <div className={styles.container}>
+      <Link to="/" className={styles.backButton}>返回首页</Link>
       <h1 className={styles.title}>useTransition 示例</h1>
 
       <div className={styles.inputGroup}>
