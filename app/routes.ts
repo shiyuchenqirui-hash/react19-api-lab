@@ -8,4 +8,5 @@ export default [
   route("UseDeferredValue", "routes/UseDeferredValue/page.tsx"),
   route("UseActionState1", "routes/UseActionState/demo1.tsx"),
   route("UseActionState2", "routes/UseActionState/demo2.tsx"),
+  route("FormAction", "routes/FormAction/page.tsx"),
 ] satisfies RouteConfig;
