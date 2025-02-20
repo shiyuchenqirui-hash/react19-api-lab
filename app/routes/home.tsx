@@ -22,8 +22,13 @@ export default function Home() {
               </Link>
             </li>
             <li className="demo-item">
-              <Link to="/UseOptimistic" className="demo-link">
-                UseOptimistic
+              <Link to="/UseActionState1" className="demo-link">
+                UseActionState - Demo1
+              </Link>
+            </li>
+            <li className="demo-item">
+              <Link to="/UseActionState2" className="demo-link">
+                UseActionState - Demo2
               </Link>
             </li>
             <li className="demo-item">
@@ -32,13 +37,13 @@ export default function Home() {
               </Link>
             </li>
             <li className="demo-item">
-              <Link to="/RefClean" className="demo-link">
-                RefClean
+              <Link to="/UseOptimistic" className="demo-link">
+                UseOptimistic
               </Link>
             </li>
             <li className="demo-item">
-              <Link to="/UseActionState" className="demo-link">
-                UseActionState
+              <Link to="/RefClean" className="demo-link">
+                RefClean
               </Link>
             </li>
           </ul>

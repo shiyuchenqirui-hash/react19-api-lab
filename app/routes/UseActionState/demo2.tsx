@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useTransition } from "react";
 import { useActionState } from "react";
 import "./styles.css";
 
@@ -30,8 +31,9 @@ async function updateUserInfo(formData: FormData): Promise<UpdateResult> {
   });
 }
 
-export default function UseActionStatePage() {
-  const [state, submitAction, isPending] = useActionState<
+export default function UseActionStateWithTransitionPage() {
+  const [isPending, startTransition] = useTransition();
+  const [state, submitAction, isActionPending] = useActionState<
     UpdateResult | null,
     FormData
   >(
@@ -46,17 +48,24 @@ export default function UseActionStatePage() {
     null // 初始状态
   );
 
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    startTransition(() => {
+      submitAction(new FormData(event.target as HTMLFormElement));
+    });
+  };
+
   return (
     <div className="demo-container">
       <div className="demo-header">
         <Link to="/" className="back-button">
           Back to Home
         </Link>
-        <h1>useActionState Demo</h1>
+        <h2>useActionState with startTransition Demo</h2>
       </div>
 
       <div className="demo-content">
-        <form action={submitAction}>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>用户名：</label>
             <input
@@ -79,10 +88,10 @@ export default function UseActionStatePage() {
 
           <button
             type="submit"
-            disabled={isPending}
-            className={isPending ? "loading" : ""}
+            disabled={isActionPending}
+            className={isActionPending ? "loading" : ""}
           >
-            {isPending ? "提交中..." : "更新信息"}
+            {isActionPending ? "提交中..." : "更新信息"}
           </button>
 
           {/* 状态反馈区域 */}
