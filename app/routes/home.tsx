@@ -32,6 +32,16 @@ export default function Home() {
               </Link>
             </li>
             <li className="demo-item">
+              <Link to="/FormAction" className="demo-link">
+                FormAction
+              </Link>
+            </li>
+            <li className="demo-item">
+              <Link to="/UseFormStatus" className="demo-link">
+                useFormStatus
+              </Link>
+            </li>
+            <li className="demo-item">
               <Link to="/UseDeferredValue" className="demo-link">
                 UseDeferredValue
               </Link>
@@ -44,11 +54,6 @@ export default function Home() {
             <li className="demo-item">
               <Link to="/RefClean" className="demo-link">
                 RefClean
-              </Link>
-            </li>
-            <li className="demo-item">
-              <Link to="/FormAction" className="demo-link">
-                FormAction
               </Link>
             </li>
           </ul>
