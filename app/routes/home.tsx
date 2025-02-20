@@ -56,6 +56,11 @@ export default function Home() {
                 RefClean
               </Link>
             </li>
+            <li className="demo-item">
+              <Link to="/Use" className="demo-link">
+                Use Context
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

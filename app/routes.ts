@@ -10,4 +10,5 @@ export default [
   route("UseDeferredValue", "routes/UseDeferredValue/page.tsx"),
   route("UseOptimistic", "routes/UseOptimistic/page.tsx"),
   route("RefClean", "routes/RefClean/page.tsx"),
+  route("Use", "routes/Use/demo1.tsx"),
 ] satisfies RouteConfig;
