@@ -1,0 +1,52 @@
+.scrollContainer {
+  overflow-y: scroll;
+  height: 300px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scrollContent {
+  min-height: 800px;
+  padding: 20px;
+}
+
+.scrollContent h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.scrollContent p {
+  color: #666;
+  line-height: 1.6;
+  margin: 16px 0;
+}
+
+.colorBlock {
+  height: 200px;
+  background: linear-gradient(45deg, #f3f3f3, #e3e3e3);
+  margin: 20px 0;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.colorBlock:hover {
+  background: linear-gradient(45deg, #e3e3e3, #d3d3d3);
+}
+
+.backButton {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.backButton:hover {
+  background-color: #e0e0e0;
+}
