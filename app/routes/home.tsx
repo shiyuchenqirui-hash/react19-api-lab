@@ -57,8 +57,13 @@ export default function Home() {
               </Link>
             </li>
             <li className="demo-item">
-              <Link to="/Use" className="demo-link">
+              <Link to="/Use1" className="demo-link">
                 Use Context
+              </Link>
+            </li>
+            <li className="demo-item">
+              <Link to="/Use2" className="demo-link">
+                Use Promise
               </Link>
             </li>
           </ul>
