@@ -1,100 +1,40 @@
-# Welcome to React Router!
+# React 19 API Lab
 
-A modern, production-ready template for building full-stack React applications using React Router.
+一个以独立页面观察 React API 行为的学习仓库，不是业务产品或完整最佳实践模板。代码始于 2025-02-18，现有实验集中在 2025-02-18～20；2026-10-05 补齐复现入口与证据边界，没有把整理日期冒充实验完成日期。
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 已有内容
 
-## Features
+10 个路由覆盖 Actions、表单状态、乐观更新、延迟渲染、ref 清理，以及 `use` 读取 Context / Promise。React Router 7 提供实验导航和 SSR，异步请求由定时器模拟，不连接业务后台。这里也包含 React 18 已有的 API，不是“10 个 React 19 新功能”。
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+从 [实验索引](docs/README.md) 选一个问题，再查看对应代码、操作步骤与官方资料。
 
-## Getting Started
+## 运行
 
-### Installation
+本次检查使用 macOS、Node 22.23.2、npm 10.9.8；锁定安装得到 React 19.0.0、React Router 7.1.5、Vite 5.4.14。
 
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
+```sh
+npm ci
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+打开终端显示的本地地址，从首页进入实验。使用同一份 `package-lock.json` 复现；仓库保留原有 `pnpm-lock.yaml`，本轮未验证 pnpm 路径，不混用两种安装方式。
 
-## Building for Production
-
-Create a production build:
-
-```bash
+```sh
+npm run typecheck
 npm run build
+npm start
 ```
 
-## Deployment
+`build` 同时生成客户端与 SSR 服务端产物；`npm start` 要在构建后运行。终端中按 Ctrl+C 停止服务。
 
-### Docker Deployment
+## 当前证据与限制
 
-This template includes three Dockerfiles optimized for different package managers:
+2026-10-05：`npm ci --ignore-scripts --no-audit --no-fund`、类型检查、生产构建通过。没有自动化交互测试，本轮没有逐页浏览器验收；构建通过不代表 API 用法全部正确。
 
-- `Dockerfile` - for npm
-- `Dockerfile.pnpm` - for pnpm
-- `Dockerfile.bun` - for bun
+保留了探索中的实现，包括未返回异步链的 FormAction、组件渲染中创建 Promise、乐观状态与最终状态重叠等待复核点，详见 [实验记录](docs/implementation/impl_react_api_experiments.md)。人工阻塞慢列表仅用于观察，不应用到生产代码。
 
-To build and run using Docker:
+## 维护方式
 
-```bash
-# For npm
-docker build -t my-app .
+每次实验保留“问题 → 官方资料 → 文件入口 → 操作 → 实际结果 → 边界”，失败和未验证状态也记录。阶段提交按真实主题拆分，不用补造提交次数证明学习。
 
-# For pnpm
-docker build -f Dockerfile.pnpm -t my-app .
-
-# For bun
-docker build -f Dockerfile.bun -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+依赖是历史实验基线，本轮未升级、未完成依赖安全审计；仅本地学习，不直接部署为公网服务。公开前检查代码、文档、截图及待推分支的历史，不使用镜像推送代替审查。

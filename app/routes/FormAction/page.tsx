@@ -28,6 +28,7 @@ export default function FormActionsDemo() {
   const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (formData: FormData) => {
+    // TODO: 对照 return/await 请求的版本，验证 pending 是否覆盖完整异步阶段。
     // ! 请注意，startTransition并不是必须的
     startTransition(() => {
       updateUserInfo(formData)

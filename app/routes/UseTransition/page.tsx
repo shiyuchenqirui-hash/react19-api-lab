@@ -14,6 +14,7 @@ export default function UseTransitionDemo() {
     startTransition(async () => {
       await new Promise((resolve) => {
         setTimeout(() => {
+          // TODO: 单独验证计时器中的更新优先级，不把 pending 等同于 transition 标记。
           setList((prevList) => [...prevList, inputValue]);
           resolve(void 0);
         }, 3000);

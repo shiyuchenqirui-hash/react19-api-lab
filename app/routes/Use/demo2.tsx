@@ -21,6 +21,7 @@ const DataComponent: React.FC<{ dataPromise: Promise<string> }> = ({
 
 // 父组件，使用 Suspense 处理加载状态
 const App: React.FC = () => {
+  // TODO: 对照稳定 Promise 身份的版本，记录客户端重渲染和 Suspense 警告。
   const dataPromise = fetchData(); // 创建一个 Promise
 
   return (
